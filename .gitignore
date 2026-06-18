@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Claude Code per-user settings (kept out of source control)
+.claude/settings.local.json
+
+# Secrets — never commit (safety net; secrets belong in a secret store)
+.env
+.env.*

@@ -1,0 +1,295 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "v1 OAuth API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/OAuth/Token": {
+      "post": {
+        "tags": [
+          "OAuth"
+        ],
+        "summary": "Request an access token and a refresh token using an authorization code, refresh token, or device code.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "client_id": {
+                    "type": "string",
+                    "description": "\r\nFor Authorization Code and Refresh Token grants, the `client_id` and `client_secret` can be provided \r\n            in the request body or in the Authorization header using Basic authentication, but NOT both.\r\n\r\nFor Device Code grants, the `client_id` must be provided in the request body, and the `client_secret`\r\n            must NOT be provided, since Device Code grants are intended for public clients that don't have a client\r\n            secret."
+                  },
+                  "client_secret": {
+                    "type": "string",
+                    "description": "\r\nFor Authorization Code and Refresh Token grants, the `client_id` and `client_secret` can be provided \r\n            in the request body or in the Authorization header using Basic authentication, but NOT both.\r\n\r\nFor Device Code grants, the `client_id` must be provided in the request body, and the `client_secret`\r\n            must NOT be provided, since Device Code grants are intended for public clients that don't have a client\r\n            secret."
+                  },
+                  "code": {
+                    "type": "string",
+                    "description": "For the Authorization Code grant, the authorization code received from the authorization endpoint. This \r\ncode is used to obtain an access token and refresh token."
+                  },
+                  "refresh_token": {
+                    "type": "string",
+                    "description": "For the Refresh Token grant, the refresh token issued to the client. This token is used to obtain a new\r\naccess token and refresh token."
+                  },
+                  "grant_type": {
+                    "type": "string",
+                    "description": "`authorization_code`, `refresh_token`, or `urn:ietf:params:oauth:grant-type:device_code` \r\n            to indicate the type of grant being requested."
+                  },
+                  "redirect_uri": {
+                    "type": "string",
+                    "description": "For the Authorization Code grant, the redirection URI used in the initial authorization request. They must match exactly."
+                  },
+                  "device_code": {
+                    "type": "string",
+                    "description": "For the Device Code grant, the device code received from the device authorization endpoint. This code is used to obtain \r\nan access token and refresh token after the user authorizes the device."
+                  }
+                }
+              },
+              "encoding": {
+                "client_id": {
+                  "style": "form"
+                },
+                "client_secret": {
+                  "style": "form"
+                },
+                "code": {
+                  "style": "form"
+                },
+                "refresh_token": {
+                  "style": "form"
+                },
+                "grant_type": {
+                  "style": "form"
+                },
+                "redirect_uri": {
+                  "style": "form"
+                },
+                "device_code": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.OAuth.OAuthToken.CommandResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.OAuth.OAuthToken.ErrorResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/OAuth/Device_Authorization": {
+      "post": {
+        "tags": [
+          "OAuth"
+        ],
+        "summary": "Initiate the device authorization flow by requesting a device code and user code, which can be used to obtain\r\nan access token and refresh token via the Token endpoint.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "client_id": {
+                    "type": "string",
+                    "description": "For Device Code Grant requests, the ID of the client requesting access."
+                  },
+                  "scope": {
+                    "type": "string",
+                    "description": "For Device Code Grant requests, the space-delimited scopes of authorization requested by the client."
+                  }
+                }
+              },
+              "encoding": {
+                "client_id": {
+                  "style": "form"
+                },
+                "scope": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.OAuth.OAuthDeviceAuthorization.CommandResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.OAuth.OAuthDeviceAuthorization.ErrorResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FastBound.Web.Models.OAuth.OAuthDeviceAuthorization.CommandResult": {
+        "type": "object",
+        "properties": {
+          "device_code": {
+            "type": "string",
+            "description": "For successful requests, the device code that the client will use to poll for an access token.",
+            "nullable": true
+          },
+          "user_code": {
+            "type": "string",
+            "description": "For successful requests, the user code that the user will enter on a separate device to approve\r\nthe authorization request.",
+            "nullable": true
+          },
+          "verification_uri": {
+            "type": "string",
+            "description": "For successful requests, the URI that the user will visit on a separate device to enter their\r\nuser code and approve the authorization request.",
+            "nullable": true
+          },
+          "verification_uri_complete": {
+            "type": "string",
+            "description": "For successful requests, the URI that the user will visit on a separate device to enter their\r\nuser code and approve the authorization request. The \"complete\" URI includes the user code as\r\na query parameter, which some client apps may want to use to provide a seamless user experience \r\n(e.g., scanning a QR Code).",
+            "nullable": true
+          },
+          "expires_in": {
+            "type": "integer",
+            "description": "For successful requests, the lifetime in seconds of the device code and user code. After this \r\ntime, the device code and user code will expire.",
+            "format": "int32",
+            "nullable": true
+          },
+          "interval": {
+            "type": "integer",
+            "description": "For successful requests, the minimum amount of time in seconds that the client SHOULD wait \r\nbetween polling requests to the token endpoint.",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Web.Models.OAuth.OAuthDeviceAuthorization.ErrorResult": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "For unsuccessful requests, the type of error.",
+            "nullable": true
+          },
+          "error_description": {
+            "type": "string",
+            "description": "For unsuccessful requests, a human-readable description of the error.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "OAuth error fields (RFC 6749 Section 5.2)"
+      },
+      "FastBound.Web.Models.OAuth.OAuthToken.CommandResult": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "description": "For successful requests, the access token issued by the authorization server. This token is used to authenticate API requests.",
+            "nullable": true
+          },
+          "token_type": {
+            "type": "string",
+            "description": "For successful requests, the type of the token issued (in this case, `Bearer`).",
+            "nullable": true
+          },
+          "expires_in": {
+            "type": "integer",
+            "description": "For successful requests, the lifetime in seconds of the access token.",
+            "format": "int32",
+            "nullable": true
+          },
+          "refresh_token": {
+            "type": "string",
+            "description": "For successful requests, the refresh token which can be used to obtain new access tokens using the Refresh Token grant.",
+            "nullable": true
+          },
+          "refresh_token_expires_in": {
+            "type": "integer",
+            "description": "For successful requests, the lifetime in seconds of the refresh token.",
+            "format": "int32",
+            "nullable": true
+          },
+          "scope": {
+            "type": "string",
+            "description": "Space-delimited scope string per RFC 6749 Section 5.1.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Web.Models.OAuth.OAuthToken.ErrorResult": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "For unsuccessful requests, the type of error.",
+            "nullable": true
+          },
+          "error_description": {
+            "type": "string",
+            "description": "For unsuccessful requests, a human-readable description of the error.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "OAuth error fields (RFC 6749 Section 5.2)"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "OAuth"
+    }
+  ]
+}
