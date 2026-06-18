@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "fastbound",
+  "displayName": "FastBound Skills",
+  "description": "Official FastBound Agent Skills for AI coding assistants — integrate with FastBound's products and APIs. Includes the fastbound-api skill, with more to come.",
+  "author": {
+    "name": "FastBound, Inc.",
+    "url": "https://www.fastbound.com"
+  },
+  "homepage": "https://fastbound.help",
+  "repository": "https://github.com/FastBound/skills",
+  "license": "LicenseRef-Proprietary",
+  "keywords": [
+    "fastbound",
+    "ffl",
+    "atf",
+    "form-4473",
+    "bound-book",
+    "acquisition-disposition",
+    "firearms",
+    "api-integration"
+  ]
+}

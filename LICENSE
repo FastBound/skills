@@ -1,0 +1,58 @@
+FastBound Skills — Proprietary License
+
+Copyright (c) FastBound, Inc. All rights reserved.
+
+The contents of this repository — the Agent Skills published here, their
+documentation and bundled reference materials, the plugin and marketplace
+manifests, and this notice (collectively, the "Skills") — are the proprietary
+property of FastBound, Inc. ("FastBound"). The Skills are made available solely
+as reference material to help developers build integrations with FastBound's
+products and APIs. Your use of the Skills is governed by the terms below. If you
+do not agree to these terms, do not download, install, or use the Skills.
+
+1. Grant of License. Subject to your compliance with this License, FastBound
+   grants you a personal, non-exclusive, non-transferable, non-sublicensable,
+   revocable license to download, install, use, and modify the Skills for your
+   own purposes, including developing, operating, and maintaining integrations
+   with FastBound. What you do with the Skills locally, for your own use, is up
+   to you.
+
+2. No Redistribution. You may not distribute the Skills to any third party. This
+   means you may not redistribute, publish, mirror, sell, rent, lease,
+   sublicense, or otherwise make available — whether standalone or bundled into
+   another product, plugin, dataset, or distribution, and whether modified or
+   unmodified, in whole or in part — the Skills or any derivative or modified
+   version of them. Partners wishing to redistribute or embed the Skills must
+   obtain separate written authorization from FastBound.
+
+3. Notices. You may not remove, obscure, or alter any copyright, trademark, or
+   other proprietary notice contained in the Skills.
+
+4. Trademarks. "FastBound" is a registered trademark of FastBound, Inc. This
+   License grants no right to use the FastBound name or any FastBound trademark,
+   service mark, or trade name. Nothing in the Skills should be construed as
+   granting, by implication or otherwise, any license or right to use any
+   FastBound mark without FastBound's prior written permission.
+
+5. Reservation of Rights. All rights not expressly granted in this License are
+   reserved by FastBound, Inc. No other rights or licenses are granted, whether
+   by implication, estoppel, or otherwise.
+
+6. No Warranty. THE SKILLS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. The
+   Skills are reference material and are not a substitute for the official
+   FastBound documentation, regulatory advice, or legal counsel.
+
+7. Limitation of Liability. IN NO EVENT SHALL FASTBOUND, INC. BE LIABLE FOR ANY
+   CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT,
+   OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SKILLS OR THE
+   USE OR OTHER DEALINGS IN THE SKILLS.
+
+8. Termination. This License terminates automatically and immediately if you
+   breach Section 2 (No Redistribution). Upon termination, you must cease
+   distributing the Skills and destroy any copies you have made available to
+   third parties.
+
+For permission to redistribute or embed the Skills, or for any other licensing
+question, contact support@fastbound.com.
