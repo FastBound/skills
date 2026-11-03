@@ -1,0 +1,5 @@
+# The bundled OpenAPI specs are external exports from FastBound's API, not
+# project source. Exclude them from GitHub's language statistics so the repo
+# is classified by its actual content (Markdown skill docs) rather than reading
+# as a ~80% JSON project. They remain visible in diffs.
+**/swagger/*.json linguist-vendored

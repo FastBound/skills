@@ -1,0 +1,382 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "v1 Partner API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Accounts": {
+      "post": {
+        "tags": [
+          "PartnersAccountsV1"
+        ],
+        "summary": "Create a FastBound user and account.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json-patch+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.Command"
+              }
+            },
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.Command"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.Command"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.Command"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.CreatedAccountModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Transfers": {
+      "post": {
+        "tags": [
+          "PartnersTransfersV1"
+        ],
+        "summary": "Transfer one or more items to a FastBound account. Creates an acquisition in the destination account.",
+        "parameters": [
+          {
+            "name": "x-api-version",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.Command"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.CreatedAcquisitionModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/problem+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Microsoft.AspNetCore.Mvc.ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.Command": {
+        "type": "object",
+        "properties": {
+          "verifiedEmailAddress": {
+            "type": "string",
+            "description": "Required. The email address of the account owner user.",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "description": "Required. The FFL Number of the account to create.",
+            "nullable": true
+          },
+          "accountNickname": {
+            "type": "string",
+            "description": "Optional. The account nickname. If null, defaults to trade name, if present, or the license name.",
+            "nullable": true
+          },
+          "planId": {
+            "type": "string",
+            "description": "Required. The Id of the billing plan to associate with the account.",
+            "nullable": true
+          },
+          "timeZoneId": {
+            "type": "string",
+            "description": "Required. The IANA time zone Id of the FFL's physical premise.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Web.Models.Api.V1.Partners.Accounts.CreateAccount.CreatedAccountModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "number": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "apiKey": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.Command": {
+        "type": "object",
+        "properties": {
+          "idempotency_key": {
+            "type": "string",
+            "description": "Required. A unique key that the server uses to recognize subsequent retries of the same request. How you create \r\nunique keys is up to you, but we suggest using UUIDs, hashes, or another random string with enough entropy to \r\navoid collisions.",
+            "nullable": true
+          },
+          "transferor": {
+            "type": "string",
+            "description": "Required. The transferor's (sender's) FFL number.",
+            "nullable": true
+          },
+          "transferee": {
+            "type": "string",
+            "description": "Required. The transferee's (receiver's) FFL number.",
+            "nullable": true
+          },
+          "transferee_emails": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Required. One or more email addresses used by the transferee in FastBound. At least one must be associated with\r\nthe destination account.",
+            "nullable": true
+          },
+          "tracking_number": {
+            "type": "string",
+            "description": "Optional. The shipment tracking number.",
+            "nullable": true
+          },
+          "po_number": {
+            "type": "string",
+            "description": "Optional. The purchase order number.",
+            "nullable": true
+          },
+          "invoice_number": {
+            "type": "string",
+            "description": "Optional. The invoice number.",
+            "nullable": true
+          },
+          "acquire_type": {
+            "type": "string",
+            "description": "Optional. The type of acquisition.",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "description": "Optional. Additional information about the transfer.",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.Command.ItemModel"
+            },
+            "description": "Required. One or more items to transfer to the transferee.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.Command.ItemModel": {
+        "type": "object",
+        "properties": {
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "country": {
+            "type": "string",
+            "description": "only required if the Location's settings say so",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "string",
+            "nullable": true
+          },
+          "price": {
+            "type": "string",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents an item to transfer to the transferee."
+      },
+      "FastBound.Web.Models.Api.V1.Partners.Transfers.CreateTransfer.CreatedAcquisitionModel": {
+        "type": "object",
+        "properties": {
+          "accountNumber": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "acquisitionId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "acquisitionUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Microsoft.AspNetCore.Mvc.ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "PartnersAccountsV1"
+    },
+    {
+      "name": "PartnersTransfersV1"
+    }
+  ]
+}
