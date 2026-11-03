@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "fastbound-skills",
+  "owner": {
+    "name": "FastBound, Inc.",
+    "url": "https://www.fastbound.com"
+  },
+  "description": "Official FastBound Agent Skills for AI coding assistants.",
+  "plugins": [
+    {
+      "name": "fastbound",
+      "source": "./",
+      "description": "Official FastBound Agent Skills for AI coding assistants — integrate with FastBound's products and APIs. Includes the fastbound-api skill, with more to come.",
+      "category": "api-integration"
+    }
+  ]
+}

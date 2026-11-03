@@ -1,0 +1,6895 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "v1 WebhookModels API",
+    "version": "1.0"
+  },
+  "paths": { },
+  "components": {
+    "schemas": {
+      "FastBound.Common.Enums.BusinessTypes": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "SoleProprietor",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Sole Proprietor",
+            "format": "int32"
+          },
+          {
+            "title": "Partnership",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Partnership",
+            "format": "int32"
+          },
+          {
+            "title": "Corporation",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Corporation",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "SoleProprietor",
+          "Partnership",
+          "Corporation"
+        ],
+        "x-enumDescriptions": [
+          "Sole Proprietor",
+          "Partnership",
+          "Corporation"
+        ]
+      },
+      "FastBound.Common.Enums.ContactStatuses": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "Approved",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Approved",
+            "format": "int32"
+          },
+          {
+            "title": "Caution",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Caution",
+            "format": "int32"
+          },
+          {
+            "title": "Denied",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Denied",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "Approved",
+          "Caution",
+          "Denied"
+        ],
+        "x-enumDescriptions": [
+          "Approved",
+          "Caution",
+          "Denied"
+        ]
+      },
+      "FastBound.Common.Enums.MultipleSaleReportType": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "NoReport",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "No Report",
+            "format": "int32"
+          },
+          {
+            "title": "Form33104",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "3310.4",
+            "format": "int32"
+          },
+          {
+            "title": "Form331012",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "3310.12",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "NoReport",
+          "Form33104",
+          "Form331012"
+        ],
+        "x-enumDescriptions": [
+          "No Report",
+          "3310.4",
+          "3310.12"
+        ]
+      },
+      "FastBound.Common.Enums.SOTClasses": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "Importer",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "1 - Importer",
+            "format": "int32"
+          },
+          {
+            "title": "Manufacturer",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "2 - Manufacturer",
+            "format": "int32"
+          },
+          {
+            "title": "Dealer",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "3 - Dealer",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "Importer",
+          "Manufacturer",
+          "Dealer"
+        ],
+        "x-enumDescriptions": [
+          "1 - Importer",
+          "2 - Manufacturer",
+          "3 - Dealer"
+        ]
+      },
+      "FastBound.Data.Enums.DispositionStatuses": {
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "Pending",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Pending",
+            "format": "int32"
+          },
+          {
+            "title": "AwaitingForm4473Completion",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Awaiting Form 4473 Completion",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "Pending",
+          "AwaitingForm4473Completion"
+        ],
+        "x-enumDescriptions": [
+          "Pending",
+          "Awaiting Form 4473 Completion"
+        ]
+      },
+      "FastBound.Data.Enums.Form4473BuyerLanguages": {
+        "enum": [
+          1,
+          2
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "English",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "English",
+            "format": "int32"
+          },
+          {
+            "title": "Spanish",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Spanish",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "English",
+          "Spanish"
+        ],
+        "x-enumDescriptions": [
+          "English",
+          "Spanish"
+        ]
+      },
+      "FastBound.Data.Enums.Form4473Responses": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "None",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "None",
+            "format": "int32"
+          },
+          {
+            "title": "Proceed",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Proceed",
+            "format": "int32"
+          },
+          {
+            "title": "Denied",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Denied",
+            "format": "int32"
+          },
+          {
+            "title": "Cancelled",
+            "enum": [
+              4
+            ],
+            "type": "integer",
+            "description": "Cancelled",
+            "format": "int32"
+          },
+          {
+            "title": "NFAExempt",
+            "enum": [
+              5
+            ],
+            "type": "integer",
+            "description": "NFA Exempt",
+            "format": "int32"
+          },
+          {
+            "title": "PermitExempt",
+            "enum": [
+              6
+            ],
+            "type": "integer",
+            "description": "Permit Exempt",
+            "format": "int32"
+          },
+          {
+            "title": "DelayedProceed",
+            "enum": [
+              7
+            ],
+            "type": "integer",
+            "description": "Delayed - Proceed",
+            "format": "int32"
+          },
+          {
+            "title": "DelayedDenied",
+            "enum": [
+              8
+            ],
+            "type": "integer",
+            "description": "Delayed - Denied",
+            "format": "int32"
+          },
+          {
+            "title": "DelayedCancelled",
+            "enum": [
+              9
+            ],
+            "type": "integer",
+            "description": "Delayed - Cancelled",
+            "format": "int32"
+          },
+          {
+            "title": "DelayedNoResponse",
+            "enum": [
+              10
+            ],
+            "type": "integer",
+            "description": "Delayed - No Response Provided Within 3 Business Days",
+            "format": "int32"
+          },
+          {
+            "title": "DeniedProceedOverturned",
+            "enum": [
+              11
+            ],
+            "type": "integer",
+            "description": "Denied - Subsequent Proceed / Overturned",
+            "format": "int32"
+          },
+          {
+            "title": "DelayedNoResponse10DaysBuyerUnder21",
+            "enum": [
+              12
+            ],
+            "type": "integer",
+            "description": "Delayed - No Response Provided Within 10 Business Days  for Transferee/Buyer Under 21 Years of Age",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "None",
+          "Proceed",
+          "Denied",
+          "Cancelled",
+          "NFAExempt",
+          "PermitExempt",
+          "DelayedProceed",
+          "DelayedDenied",
+          "DelayedCancelled",
+          "DelayedNoResponse",
+          "DeniedProceedOverturned",
+          "DelayedNoResponse10DaysBuyerUnder21"
+        ],
+        "x-enumDescriptions": [
+          "None",
+          "Proceed",
+          "Denied",
+          "Cancelled",
+          "NFA Exempt",
+          "Permit Exempt",
+          "Delayed - Proceed",
+          "Delayed - Denied",
+          "Delayed - Cancelled",
+          "Delayed - No Response Provided Within 3 Business Days",
+          "Denied - Subsequent Proceed / Overturned",
+          "Delayed - No Response Provided Within 10 Business Days  for Transferee/Buyer Under 21 Years of Age"
+        ]
+      },
+      "FastBound.Data.Enums.Form4473Statuses": {
+        "enum": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "CustomerComplete",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Customer Complete",
+            "format": "int32"
+          },
+          {
+            "title": "Restarted",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Restarted",
+            "format": "int32"
+          },
+          {
+            "title": "Terminated",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Void / No Transfer",
+            "format": "int32"
+          },
+          {
+            "title": "Completed",
+            "enum": [
+              4
+            ],
+            "type": "integer",
+            "description": "Completed",
+            "format": "int32"
+          },
+          {
+            "title": "Started",
+            "enum": [
+              5
+            ],
+            "type": "integer",
+            "description": "Started",
+            "format": "int32"
+          },
+          {
+            "title": "AwaitingBuyerCertification",
+            "enum": [
+              6
+            ],
+            "type": "integer",
+            "description": "Awaiting Buyer Certification",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "CustomerComplete",
+          "Restarted",
+          "Terminated",
+          "Completed",
+          "Started",
+          "AwaitingBuyerCertification"
+        ],
+        "x-enumDescriptions": [
+          "Customer Complete",
+          "Restarted",
+          "Void / No Transfer",
+          "Completed",
+          "Started",
+          "Awaiting Buyer Certification"
+        ]
+      },
+      "FastBound.Data.Enums.ItemStatuses": {
+        "enum": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "Available",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Available",
+            "format": "int32"
+          },
+          {
+            "title": "PendingDisposal",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Pending Disposal",
+            "format": "int32"
+          },
+          {
+            "title": "Disposed",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Disposed",
+            "format": "int32"
+          },
+          {
+            "title": "Deleted",
+            "enum": [
+              4
+            ],
+            "type": "integer",
+            "description": "Deleted",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "Available",
+          "PendingDisposal",
+          "Disposed",
+          "Deleted"
+        ],
+        "x-enumDescriptions": [
+          "Available",
+          "Pending Disposal",
+          "Disposed",
+          "Deleted"
+        ]
+      },
+      "FastBound.Data.Enums.MultipleSaleReportStatuses": {
+        "enum": [
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "oneOf": [
+          {
+            "title": "Pending",
+            "enum": [
+              1
+            ],
+            "type": "integer",
+            "description": "Pending",
+            "format": "int32"
+          },
+          {
+            "title": "Dismissed",
+            "enum": [
+              2
+            ],
+            "type": "integer",
+            "description": "Dismissed",
+            "format": "int32"
+          },
+          {
+            "title": "Transmitted",
+            "enum": [
+              3
+            ],
+            "type": "integer",
+            "description": "Transmitted",
+            "format": "int32"
+          }
+        ],
+        "format": "int32",
+        "x-enumNames": [
+          "Pending",
+          "Dismissed",
+          "Transmitted"
+        ],
+        "x-enumDescriptions": [
+          "Pending",
+          "Dismissed",
+          "Transmitted"
+        ]
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCommittedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionCommittedEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionCommittedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManufacturingAcquisition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCommittedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCommittedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCreatedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionCreatedEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionCreatedEvent.AcquisitionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManufacturingAcquisition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCreatedEvent.AcquisitionItemModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionCreatedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionDeletedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionDeletedEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionDeletedEvent.AcquisitionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManufacturingAcquisition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionDeletedEvent.AcquisitionItemModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionDeletedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionTransferEvent": {
+        "type": "object",
+        "properties": {
+          "transferorContact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionTransferEvent.ContactModel"
+          },
+          "transfereeContact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionTransferEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.AcquisitionTransferEvent.AcquisitionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManufacturingAcquisition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionTransferEvent.AcquisitionItemModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.AcquisitionTransferEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ContactCreatedEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ContactDeletedEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ContactEditedEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionCommittedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionCommittedEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionCommittedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionCommittedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionCommittedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionDeletedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionDeletedEvent.ContactModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionDeletedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionDeletedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionDeletedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionEditedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionEditedEvent.ContactModel"
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionEditedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.ContactModel"
+          },
+          "dispositionItemsAdded": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.DispositionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.DispositionItemModel": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.ItemModel"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pawnRedemption": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsAddedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.ContactModel"
+          },
+          "dispositionItemsEdited": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.DispositionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.DispositionItemModel": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.ItemModel"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pawnRedemption": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsEditedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent": {
+        "type": "object",
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.ContactModel"
+          },
+          "dispositionItemsRemoved": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.DispositionItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "is4473": {
+            "type": "boolean"
+          },
+          "isManufacturingDisposition": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.DispositionItemModel": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.ItemModel"
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "pawnRedemption": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.DispositionItemsRemovedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.Form4473CompletedEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.Form4473Statuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "response": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.Form4473Responses"
+          },
+          "responseText": {
+            "type": "string",
+            "nullable": true
+          },
+          "responseDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "terminationDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "transferDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "buyerLanguage": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.Form4473BuyerLanguages"
+          },
+          "buyerLanguageText": {
+            "type": "string",
+            "nullable": true
+          },
+          "apiDownloadUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "contact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.Form4473CompletedEvent.ContactModel"
+          },
+          "disposition": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.Form4473CompletedEvent.DispositionModel"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.Form4473CompletedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.Form4473CompletedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.Form4473CompletedEvent.DispositionModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "shipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.DispositionStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.Form4473CompletedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryLocationMovedEvent": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.InventoryLocationMovedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryLocationMovedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryLocationVerifiedEvent": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.InventoryLocationVerifiedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryLocationVerifiedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryNotFoundEvent": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.InventoryNotFoundEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.InventoryNotFoundEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemDeletedEvent": {
+        "type": "object",
+        "properties": {
+          "deleteType": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemEditedEvent": {
+        "type": "object",
+        "properties": {
+          "dispositionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dispose_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dispose_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "ttsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "otsn": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispose_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "submissionDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_DiscoveredDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "theftLoss_Type": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_ATFIssuedIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "theftLoss_PoliceIncidentNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "destroyed_Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness1": {
+            "type": "string",
+            "nullable": true
+          },
+          "destroyed_Witness2": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteType": {
+            "type": "string",
+            "nullable": true
+          },
+          "deleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemImportedEvent": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.ItemImportedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemImportedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemUndeletedEvent": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.ItemUndisposedEvent": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.MultipleSaleReportTransmittedEvent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dateOfReport": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "reportType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.MultipleSaleReportType"
+          },
+          "reportTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.MultipleSaleReportStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "dispositionContact": {
+            "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.MultipleSaleReportTransmittedEvent.ContactModel"
+          },
+          "apiDownloadUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FastBound.Services.Webhooks.Models.MultipleSaleReportTransmittedEvent.ItemModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          },
+          "cleoNameOfAgency": {
+            "type": "string",
+            "nullable": true
+          },
+          "cleoStreetAddressCityState": {
+            "type": "string",
+            "nullable": true
+          },
+          "gunShowOrEventAndAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "additionalInformation": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.MultipleSaleReportTransmittedEvent.ContactModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.ContactStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fflExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "licenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "tradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotein": {
+            "type": "string",
+            "nullable": true
+          },
+          "sotClass": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.SOTClasses"
+          },
+          "sotClassText": {
+            "type": "string",
+            "nullable": true
+          },
+          "businessType": {
+            "$ref": "#/components/schemas/FastBound.Common.Enums.BusinessTypes"
+          },
+          "businessTypeText": {
+            "type": "string",
+            "nullable": true
+          },
+          "organizationName": {
+            "type": "string",
+            "nullable": true
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "middleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress1": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseAddress2": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCity": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseState": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseZipCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCounty": {
+            "type": "string",
+            "nullable": true
+          },
+          "premiseCountry": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "emailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "isArchived": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "FastBound.Services.Webhooks.Models.MultipleSaleReportTransmittedEvent.ItemModel": {
+        "type": "object",
+        "properties": {
+          "acquisitionType": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Date": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_License": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LicenseExpires": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "acquire_TradeName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Organization": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_FirstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_MiddleName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_LastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Suffix": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address1": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Address2": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_City": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_State": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Postal": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Country": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PhoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_Fax": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_EmailAddress": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_PurchaseOrderNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_InvoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "acquire_ShipmentTrackingNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "undeleteNote": {
+            "type": "string",
+            "nullable": true
+          },
+          "locationVerifiedUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "externalId": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "$ref": "#/components/schemas/FastBound.Data.Enums.ItemStatuses"
+          },
+          "statusText": {
+            "type": "string",
+            "nullable": true
+          },
+          "manufacturer": {
+            "type": "string",
+            "nullable": true
+          },
+          "countryOfManufacture": {
+            "type": "string",
+            "nullable": true
+          },
+          "importer": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "caliber": {
+            "type": "string",
+            "nullable": true
+          },
+          "serial": {
+            "type": "string",
+            "nullable": true
+          },
+          "barrelLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "overallLength": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "condition": {
+            "type": "string",
+            "nullable": true
+          },
+          "location": {
+            "type": "string",
+            "nullable": true
+          },
+          "cost": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "price": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "mpn": {
+            "type": "string",
+            "nullable": true
+          },
+          "upc": {
+            "type": "string",
+            "nullable": true
+          },
+          "sku": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
